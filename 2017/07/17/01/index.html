@@ -93,12 +93,16 @@
 
 
 
-<meta property="og:type" content="website">
+<meta name="description" content="[TOC] 一、关系型数据库基础理论什么是 MVCC ，有什么作用？MVCC 是 Multi Version Concurrency Control 的缩写，中文意思是多版本并发控制。 目前多数数据库都采用了这一技术，比如 Oracle、PostgreSQL 等，但各自实现的机制不尽相同，MVCC 没有一个统一的实现标准。 MVCC 能有效降低锁的开销，虽然不同数据库实现 MVCC 的机制有所不同">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/2017/07/17/01/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="[TOC] 一、关系型数据库基础理论什么是 MVCC ，有什么作用？MVCC 是 Multi Version Concurrency Control 的缩写，中文意思是多版本并发控制。 目前多数数据库都采用了这一技术，比如 Oracle、PostgreSQL 等，但各自实现的机制不尽相同，MVCC 没有一个统一的实现标准。 MVCC 能有效降低锁的开销，虽然不同数据库实现 MVCC 的机制有所不同">
+<meta property="og:updated_time" content="2017-07-10T15:00:42.780Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="[TOC] 一、关系型数据库基础理论什么是 MVCC ，有什么作用？MVCC 是 Multi Version Concurrency Control 的缩写，中文意思是多版本并发控制。 目前多数数据库都采用了这一技术，比如 Oracle、PostgreSQL 等，但各自实现的机制不尽相同，MVCC 没有一个统一的实现标准。 MVCC 能有效降低锁的开销，虽然不同数据库实现 MVCC 的机制有所不同">
 
 
 
@@ -126,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/07/17/01/"/>
 
 
 
 
 
-  <title>Hexo</title>
+  <title> | Hexo</title>
   
 
 
@@ -157,9 +161,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -242,9 +244,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -270,9 +272,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/07/17/01/" itemprop="url">未命名</a></h1>
+          <h1 class="post-title" itemprop="name headline"></h1>
         
 
         <div class="post-meta">
@@ -319,9 +319,7 @@
       
 
       
-        
-          
-            <p>[TOC]</p>
+        <p>[TOC]</p>
 <h1 id="一、关系型数据库基础理论"><a href="#一、关系型数据库基础理论" class="headerlink" title="一、关系型数据库基础理论"></a>一、关系型数据库基础理论</h1><h2 id="什么是-MVCC-，有什么作用？"><a href="#什么是-MVCC-，有什么作用？" class="headerlink" title="什么是 MVCC ，有什么作用？"></a>什么是 MVCC ，有什么作用？</h2><p><code>MVCC</code> 是 <code>Multi Version Concurrency Control</code> 的缩写，中文意思是<strong>多版本并发控制</strong>。</p>
 <p>目前多数数据库都采用了这一技术，比如 Oracle、PostgreSQL 等，但各自实现的机制不尽相同，MVCC 没有一个统一的实现标准。</p>
 <p>MVCC 能有效降低锁的开销，虽然不同数据库实现 MVCC 的机制有所不同，但大都实现了<strong>非阻塞的读操作</strong>，写操作也只锁定必要的行。</p>
@@ -409,20 +407,27 @@
 <p>算法要解决的问题就是如何在可能发生的宕机或网络异常的分布式系统中，快速且正确地在集群内部对某个数据的值达成一致，并且保证不论发生以上任何异常，都不会破坏整个系统的一致性。</p>
 <p>Paxos 算法引入了 “过半” 的理论，通俗的讲，就是少数服从多数的原则。同时，Paxos 算法支持分布式节点角色之间的轮换，这极大的避免了分布式单点的出现，因此 Paxos 算法解决了无限期等待问题，也解决了 “脑裂” 问题，是目前来说最优秀的分布式一致性协议之一。</p>
 
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
     <div>
+      
+        
+
       
     </div>
 
@@ -430,289 +435,38 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/14/MySQL InnoDB存储引擎 MVCC 实现原理/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="liuyaofeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/07/14/MySQL InnoDB存储引擎 MVCC 实现原理/" itemprop="url">未命名</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-14T14:32:36+08:00">
-                2017-07-14
-              </time>
+              <a href="/2017/07/14/MySQL InnoDB存储引擎 MVCC 实现原理/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <h1 id="MySQL-InnoDB存储引擎-MVCC-实现原理"><a href="#MySQL-InnoDB存储引擎-MVCC-实现原理" class="headerlink" title="MySQL InnoDB存储引擎 MVCC 实现原理"></a>MySQL InnoDB存储引擎 MVCC 实现原理</h1><p>[TOC]</p>
-<h2 id="一、MVCC-简介"><a href="#一、MVCC-简介" class="headerlink" title="一、MVCC 简介"></a>一、MVCC 简介</h2><h3 id="1-1、什么是-MVCC"><a href="#1-1、什么是-MVCC" class="headerlink" title="1.1、什么是 MVCC"></a>1.1、什么是 MVCC</h3><p>MVCC 是 Multi Version Concurrency Control 的简称，代表多版本并发控制。</p>
-<p>InnoDB 是一个多版本的存储引擎：它能够保存事务未提交前的数据，用于支持事务的并发操作和回滚。这些信息都被存储在系统表空间的回滚段中(rollback segment)。这个回滚段主要实现两个功能，一个是实现事务的回滚操作，另一个就是一致性非锁定读了。</p>
-<h3 id="1-2-MVCC-解决了什么问题"><a href="#1-2-MVCC-解决了什么问题" class="headerlink" title="1.2 MVCC 解决了什么问题"></a>1.2 MVCC 解决了什么问题</h3><p>为什么需要 MVCC，还要从数据库事务的 ACID 特性说起。</p>
-<p>ACID，它们分别代表了:</p>
-<ul>
-<li>Atomicity (原子性)</li>
-<li>Consistency (一致性)</li>
-<li>Isolation (隔离性)</li>
-<li>Durability (持久性)</li>
-</ul>
-<p>原子性，表示一个事务的操作结果要么全部执行，要么全部不执行。</p>
-<p>一致性，表示事务总是从一个一致的状态转换到另一个一致的状态。</p>
-<p>隔离性，表示一个事务的修改结果在什么时间能够被其它事务看到，SQL1992 规范中，对隔离性定义了不同的隔离级别，分别为：</p>
-<ul>
-<li>读未提交 (READ UNCOMMITED)，事务能够看到其它事务没有提交的修改，当另一个事务又回滚了修改后的情况又被称为<strong>脏读 dirty read</strong>。</li>
-<li>读已提交 (READ COMMITED)，事务能够看到其它事务提交后的修改，这时会出现一个事务内两次读取数据可能因为其它事务提交的修改导致不一致的情况，称为<strong>不可重复读</strong>。</li>
-<li>可重复读 (REPEATABLE READ)，在两次读取时读取到的数据的状态是一致的。</li>
-<li>序列化 (SERIALIZABLE)，可重复读中可能出现第二次读读到第一次没有读到的数据，也就是被其它事务插入的数据，这种情况称为<strong>幻读 phantom read</strong>，序列化级别中不能出现幻读。</li>
-</ul>
-<p>隔离级别依次增强，但是导致的问题是并发能力的减弱。</p>
-<p>数据库通常使用锁来实现隔离性。最原生的锁，锁住一个资源后会禁止其它任何线程访问同一个资源。但是很多应用的一个特点都是读多写少的场景，很多数据的读取次数远大于修改的次数，而读取数据间互相排斥显得不是很必要。所以就使用一种读写锁的方法，读锁和读锁之间不互斥，而写锁和写锁、读锁都互斥。这样就很大提升了系统的并发能力。之后人们发现，并发读还是不够，又提出了能不能让读写之间也不冲突的方法，就是读取数据时通过一个类似快照的方式将数据保存下来，这样读锁就和写锁不冲突了，不同的事务 session 会看到自己特定版本的数据。当然快照是一种概念模型，不同的数据库可能用不同的方式实现这种功能。</p>
-<h3 id="1-3-MVCC-实现"><a href="#1-3-MVCC-实现" class="headerlink" title="1.3 MVCC 实现"></a>1.3 MVCC 实现</h3><p>MVCC 是通过保存数据在某个时间点的快照来实现的，不同存储引擎的 MVCC 实现是不同的，典型的有乐观并发控制和悲观并发控制。</p>
-<h2 id="MVCC-具体实现"><a href="#MVCC-具体实现" class="headerlink" title="MVCC 具体实现"></a>MVCC 具体实现</h2><p>在内部实现中，InnoDB 通过在每一行记录上添加了三个隐藏列实现。其中一个 6 字节(byte) 的 <code>DB_TRX_ID</code> 作为事务 ID 标识，用来标记最近一个事务在该行上的 insert 或者 update 的情况。<code>DB_TRX_ID</code> 中还有一个删除标识位，用来显示该行是否被删除(也就是逻辑删除的概念，InnoDB 并不会真正去物理删除某条记录)。另外，每一行还有一个 7 字节(byte) 的 <code>DB_ROLL_PTR</code> 列，可称之为回滚指针。这个回滚指针指向了写到 rollback segment 中的 undo log 的一条记录。如果该数据行被修改，那么这个 undo log 里的该条记录会在行记录被修改前重建，即保存的将是数据修改前的记录。另外行数据 insert 时，还会产生一个 6 字节(byte) 的单调自增的 <code>DB_ROW_ID</code> 列。如果 InnoDB 自动地产生聚集索引的话(也就是没有显示指定 PRIMARY KEY)，这个自动产生的聚集索引值就是 <code>DB_ROW_ID</code> 的内容，否则的话 <code>DB_ROW_ID</code> 值无意义。</p>
-<p>回滚段中的 undo log 可以分为 insert undo log 和 update undo log 两种，它们在存储上实际是分离开的。insert undo log 一般只用于事务回滚，只要事务一提交后可以立马删除。update undo log 除了事务的回滚外，还用于非锁定读。当 InnoDB 分配了一个一致性的快照读时，它就需要 update undo log 里面的信息来建立一个较早的行版本，所以只有当前没有任何事务需要对该行记录进行快照读时，它才可以删除，而不是事务一提交就删除(因为可能事务提交了，但当前的其它 session 的快照读还没执行完)</p>
-<p>InnoDB 的 MVCC，是通过在每行记面保存三个隐藏的列来实现的，这三个列为：</p>
-<ul>
-<li>DB_TRX_ID: 一个 6byte 的标识，每处理一个事务，其值自动 +1，“创建时间”和“删除时间”记录的就是这个 DB_TRX_ID 的值，如 insert、update、delete 操作时，删除操作用 1 bit 表示。DB_TRX_ID 是最重要的一个，可以通过语句 <code>SHOW ENGINE INNODB STATUS\G</code> 来查找。</li>
-<li>DB_ROLL_PTR: 大小是 7 byte，指向写到 rollback segment (回滚段)的一条 undo log 记录(update 操作的话，记录 update 前的 ROW 值)</li>
-<li>DB_ROW_ID: 大小是 6 byte，该值随新行插入单调增加，当由 Innodb 自动产生聚集索引时，聚集索引包括这个 DB_ROW_ID 的值，不然的话聚集索引中不包括这个值，这个用于索引当中。</li>
-</ul>
-<h2 id="Guidelines-for-Managing-Rollback-Segments"><a href="#Guidelines-for-Managing-Rollback-Segments" class="headerlink" title="Guidelines for Managing  Rollback Segments"></a>Guidelines for Managing  Rollback Segments</h2><ol>
-<li>正常地去提交事务，包括非锁定的一致性读。因为 InnoDB 无法及时删除 update undo log，将会导致回滚段越来越大，甚至占据绝大部分系统表空间。</li>
-<li>合理分配好 rollback segment 大小。比较典型的，undo log 占据的物理空间应该小于当前数量相当的 insert 或者 update 的行数量所需要的空间。</li>
-<li>InnoDB 中，当你执行一条 delete 语句后，行记录并不会立马被物理删除。InnoDB 只有在它删除了对应的 update undo log 之后，它才会实际去物理删除该行记录和它的索引记录，这被称之为 purge，不过 purge 通常很快，速度相当于 delete sql 执行的时间。</li>
-<li>如果频繁地在一个表的某一块区间以相同的速率 insert 和 delete，会引起 purge 线程落后，从而导致数据库达到磁盘瓶颈，这时就可以通过调整 <code>innodb_max_purge_lag</code> 这个系统参数来缓解。</li>
-</ol>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/11/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="liuyaofeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/07/11/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-11T22:20:29+08:00">
-                2017-07-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-          
-        
+    <div class="post-spread">
       
     </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
@@ -720,6 +474,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -740,8 +498,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -785,6 +552,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、关系型数据库基础理论"><span class="nav-number">1.</span> <span class="nav-text">一、关系型数据库基础理论</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是-MVCC-，有什么作用？"><span class="nav-number">1.1.</span> <span class="nav-text">什么是 MVCC ，有什么作用？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ACID-中的-I-是怎么实现的？"><span class="nav-number">1.2.</span> <span class="nav-text">ACID 中的 I 是怎么实现的？</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、分布式数据库基础理论"><span class="nav-number">2.</span> <span class="nav-text">二、分布式数据库基础理论</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2PC-在数据库中是怎么实现的？"><span class="nav-number">2.1.</span> <span class="nav-text">2PC 在数据库中是怎么实现的？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#简单讲讲-CAP-base-paxos-算法"><span class="nav-number">2.2.</span> <span class="nav-text">简单讲讲 CAP/base/paxos 算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CAP-定理"><span class="nav-number">2.2.1.</span> <span class="nav-text">CAP 定理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BASE-理论"><span class="nav-number">2.2.2.</span> <span class="nav-text">BASE 理论</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Paxos-帕克索斯-算法"><span class="nav-number">2.2.3.</span> <span class="nav-text">Paxos(帕克索斯)算法</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -898,10 +681,10 @@
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
 
-  
+
 
   
 
