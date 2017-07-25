@@ -470,7 +470,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/07/14/MySQL InnoDB存储引擎 MVCC 实现原理/" itemprop="url">未命名</a></h1>
+                <a class="post-title-link" href="/2017/07/14/MySQL InnoDB存储引擎 MVCC 实现原理/" itemprop="url">MySQL InnoDB 存储引擎 MVCC 实现原理</a></h1>
         
 
         <div class="post-meta">
@@ -519,7 +519,7 @@
       
         
           
-            <h1 id="MySQL-InnoDB存储引擎-MVCC-实现原理"><a href="#MySQL-InnoDB存储引擎-MVCC-实现原理" class="headerlink" title="MySQL InnoDB存储引擎 MVCC 实现原理"></a>MySQL InnoDB存储引擎 MVCC 实现原理</h1><p>[TOC]</p>
+            <h1 id="MySQL-InnoDB-存储引擎-MVCC-实现原理"><a href="#MySQL-InnoDB-存储引擎-MVCC-实现原理" class="headerlink" title="MySQL InnoDB 存储引擎 MVCC 实现原理"></a>MySQL InnoDB 存储引擎 MVCC 实现原理</h1><p>[TOC]</p>
 <h2 id="一、MVCC-简介"><a href="#一、MVCC-简介" class="headerlink" title="一、MVCC 简介"></a>一、MVCC 简介</h2><h3 id="1-1、什么是-MVCC"><a href="#1-1、什么是-MVCC" class="headerlink" title="1.1、什么是 MVCC"></a>1.1、什么是 MVCC</h3><p>MVCC 是 Multi Version Concurrency Control 的简称，代表多版本并发控制。</p>
 <p>InnoDB 是一个多版本的存储引擎：它能够保存事务未提交前的数据，用于支持事务的并发操作和回滚。这些信息都被存储在系统表空间的回滚段中(rollback segment)。这个回滚段主要实现两个功能，一个是实现事务的回滚操作，另一个就是一致性非锁定读了。</p>
 <h3 id="1-2-MVCC-解决了什么问题"><a href="#1-2-MVCC-解决了什么问题" class="headerlink" title="1.2 MVCC 解决了什么问题"></a>1.2 MVCC 解决了什么问题</h3><p>为什么需要 MVCC，还要从数据库事务的 ACID 特性说起。</p>
